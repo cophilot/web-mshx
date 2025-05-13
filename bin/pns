@@ -1,0 +1,12 @@
+#!/bin/bash
+#??Run pnpm start and install if node_modules not found
+#&&web,mshx
+
+if [ ! -d "node_modules" ]; then
+    echo "node_modules not found, installing..."
+    pnpm install
+fi
+
+echo "pnpm start $*"
+pnpm start $*
+
