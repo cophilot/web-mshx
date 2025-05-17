@@ -1,0 +1,8 @@
+#!/bin/bash
+#??Run a pnpm
+#&&web,mshx
+###Usage: pnr <script> [args]
+
+echo "pnpm run $*"
+pnpm run $*
+

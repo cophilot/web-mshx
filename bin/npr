@@ -1,0 +1,8 @@
+#!/bin/bash
+#??Run a npm
+#&&web,mshx
+###Usage: npr <script> [args]
+
+echo "npm run $*"
+npm run $*
+

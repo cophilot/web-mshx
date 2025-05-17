@@ -1,0 +1,6 @@
+#!/bin/bash
+#??Create a new angular project
+#&&web,mshx
+###Usage: angular-new <project-name> [args]
+
+ng new $*
