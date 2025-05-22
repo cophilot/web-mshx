@@ -1,0 +1,6 @@
+#!/bin/bash
+#??Run pnpm add
+#&&web,mshx
+
+echo "pnpm add $*"
+pnpm add $*
