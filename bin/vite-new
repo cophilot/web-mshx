@@ -1,5 +1,18 @@
 #!/bin/bash
 #??Create a new vite project
 #&&web,mshx
+###Usage: vite-new <project-name>
 
-npm create vite@latest
+
+name=$1
+if [ -z "$name" ]; then
+  echo "Usage: vite-new <project-name>"
+  exit 1
+fi
+
+npm create vite@latest "$name"
+cd "$name"
+
+npm pkg set scripts.start="vite --open"
+
+pns
