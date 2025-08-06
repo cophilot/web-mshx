@@ -1,0 +1,36 @@
+#!/bin/bash
+#??Package.json Script Runner
+#&&web,mshx
+
+if [ ! -f package.json ]; then
+	echo "Error: package.json not found in the current directory."
+	exit 1
+fi
+
+scripts=$(jq -r '.scripts | keys | .[]' package.json)
+
+if [ -z "$scripts" ]; then
+	echo "No scripts found in package.json."
+	exit 1
+fi
+
+runner="npm run"
+
+if [ -f "pnpm-lock.yaml" ]; then
+	runner="pnpm run"
+fi
+
+if [ -f "yarn.lock" ]; then
+	runner="yarn run"
+fi
+
+echo "Available scripts:"
+select script in $scripts; do
+	if [ -n "$script" ]; then
+		echo "$runner $script"
+		$runner "$script"
+		exit 0
+	else
+		echo "Invalid selection. Please try again."
+	fi
+done
