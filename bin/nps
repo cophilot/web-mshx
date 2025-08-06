@@ -3,8 +3,8 @@
 #&&web,mshx
 
 if [ ! -d "node_modules" ]; then
-    echo "node_modules not found, installing..."
-    npm install
+	echo "node_modules not found, installing..."
+	npm install
 fi
 
 echo "npm start $*"

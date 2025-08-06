@@ -5,4 +5,3 @@
 
 echo "npm run $*"
 npm run $*
-

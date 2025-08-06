@@ -3,10 +3,9 @@
 #&&web,mshx
 
 if [ ! -d "node_modules" ]; then
-    echo "node_modules not found, installing..."
-    pnpm install
+	echo "node_modules not found, installing..."
+	pnpm install
 fi
 
 echo "pnpm start $*"
 pnpm start $*
-

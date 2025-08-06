@@ -3,11 +3,10 @@
 #&&web,mshx
 ###Usage: vite-new <project-name>
 
-
 name=$1
 if [ -z "$name" ]; then
-  echo "Usage: vite-new <project-name>"
-  exit 1
+	echo "Usage: vite-new <project-name>"
+	exit 1
 fi
 
 npm create vite@latest "$name"
